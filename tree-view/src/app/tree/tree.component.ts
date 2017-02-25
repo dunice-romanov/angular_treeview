@@ -19,8 +19,13 @@ export class TreeComponent {
 
   onClick() {
     let text = this.parentInput;
-    let newObject = new TreeObject(text);
-    this.treeObjects.push(newObject);
+    text = text.trim();
+
+    if(text === '') { return; }
+    else {
+      let newObject = new TreeObject(text);
+      this.treeObjects.push(newObject);
+    }
   }
 
 }

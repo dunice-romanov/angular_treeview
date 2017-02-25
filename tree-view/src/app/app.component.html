@@ -1,5 +1,5 @@
 <div>
-    <input type="text" [(ngModel)]="inputText">
+    <input type="text" (keypress)="onKeyPress($event)" [(ngModel)]="inputText">
     <button (click)="onClick()">Add new</button>
 </div>
 

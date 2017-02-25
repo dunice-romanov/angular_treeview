@@ -15,13 +15,24 @@ export class AppComponent {
 
   constructor() {
     this.treeObjects = [];
-
   }
 
   onClick() {
     let text = this.inputText;
-    let newObject = new TreeObject(text);
-    this.treeObjects.push(newObject);
+    text = text.trim();
+
+    if (text === '') { return; }
+    else {
+      let newObject = new TreeObject(text);
+      this.treeObjects.push(newObject);
+      this.inputText = "";
+    }
+  }
+
+  onKeyPress(event) {
+    if (event.keyCode === 13) {
+      this.onClick();
+    }
   }
 
 
