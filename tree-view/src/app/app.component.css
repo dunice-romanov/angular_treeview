@@ -1,0 +1,18 @@
+div button, 
+div input[type="text"] {
+    height: 30px;
+}
+
+
+div input[type="text"] {
+    border-radius: 5px;
+    width: 300px;
+    font-size: 24px;
+}
+
+div input[type="text"]:focus {
+    background-color: lightyellow;
+}
+
+div button {
+}

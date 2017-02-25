@@ -1,0 +1,6 @@
+<div>
+    <input type="text" [(ngModel)]="inputText">
+    <button (click)="onClick()">Add new</button>
+</div>
+
+<app-tree *ngFor="let string of components" [title]="string" [parentInput]="inputText"></app-tree>

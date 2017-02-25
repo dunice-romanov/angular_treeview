@@ -1,0 +1,13 @@
+<ul>
+  <li>
+    
+    <div class="child">
+      <span class="title">{{title}}</span>
+      <button class="button" (click)="onClick()">+</button>
+    </div>
+
+      <app-tree *ngFor="let string of childDirs" [title]="string" [parentInput]="parentInput"></app-tree>
+  </li>
+
+
+</ul>

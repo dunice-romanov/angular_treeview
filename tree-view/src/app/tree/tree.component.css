@@ -1,0 +1,40 @@
+div.child,
+div.child button {
+    height: 30px;
+    background-color: orange;
+}
+
+div.child {
+    margin: 0;
+    padding: 0;
+
+    border-radius: 15px;
+    display: inline-block;
+}
+
+div.child span.title {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+    vertical-align: middle;
+
+}
+
+div.child:hover {
+    margin-left: 5px;
+}
+
+div.child button {
+    outline: none;
+    width: 30px;
+    border-radius: 10px;
+    display: inline-block;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+div.child button:hover {
+    font-weight: bolder;
+    background-color: blue;
+}
