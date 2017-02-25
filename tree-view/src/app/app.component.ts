@@ -17,7 +17,7 @@ export class AppComponent {
     this.treeObjects = [];
   }
 
-  onClick() {
+  onButtonClick() {
     let text = this.inputText;
     text = text.trim();
 
@@ -28,9 +28,9 @@ export class AppComponent {
     }
   }
 
-  onKeyPress(event) {
+  onInputKeyPress(event) {
     if (event.keyCode === 13) {
-      this.onClick();
+      this.onButtonClick();
     }
   }
 

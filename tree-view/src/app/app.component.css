@@ -1,18 +1,33 @@
-div button, 
-div input[type="text"] {
-    height: 30px;
+div.inputs {
+    display: inline-block;
 }
 
+div.inputs button, 
+div.inputs input[type="text"] {
+    height: 30px;
+    vertical-align: middle;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
 
-div input[type="text"] {
+div.inputs input[type="text"] {
     border-radius: 5px;
     width: 300px;
     font-size: 24px;
+    margin-right: 10px;
 }
 
-div input[type="text"]:focus {
+div.inputs input[type="text"]:focus {
     background-color: lightyellow;
 }
 
-div button {
+div.inputs button {
+    border: none;
+    outline: none;
+    background-color: lightgreen;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+div.inputs button:active {
+    background-color: green;
 }

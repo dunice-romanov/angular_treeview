@@ -1,6 +1,6 @@
-<div>
-    <input type="text" (keypress)="onKeyPress($event)" [(ngModel)]="inputText">
-    <button (click)="onClick()">Add new</button>
+<div class="inputs">
+    <input type="text" (keypress)="onInputKeyPress($event)" [(ngModel)]="inputText">
+    <button (click)="onButtonClick()">Add new</button>
 </div>
 
 <app-tree *ngFor="let object of treeObjects" [treeObject]="object" [parentInput]="inputText"></app-tree>

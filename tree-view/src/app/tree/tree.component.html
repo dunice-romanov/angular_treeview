@@ -1,12 +1,13 @@
 <ul>
   <li>
-    
+  
     <div class="child">
       <span class="title">{{treeObject.title}}</span>
       <button class="button" (click)="onClick()">+</button>
     </div>
 
-      <app-tree *ngFor="let object of treeObjects" [treeObject]="object" [parentInput]="parentInput"></app-tree>
+    <app-tree *ngFor="let object of treeObjects" [treeObject]="object" [parentInput]="parentInput"></app-tree>
+ 
   </li>
 
 
