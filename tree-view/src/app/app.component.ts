@@ -25,7 +25,6 @@ export class AppComponent {
     else {
       let newObject = new TreeObject(text);
       this.treeObjects.push(newObject);
-      this.inputText = "";
     }
   }
 
