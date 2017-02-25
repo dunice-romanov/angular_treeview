@@ -1,27 +1,26 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { TreeObject } from '../tree-object';
 
 @Component({
   selector: 'app-tree',
   templateUrl: './tree.component.html',
   styleUrls: ['./tree.component.css']
 })
-export class TreeComponent implements OnInit {
+export class TreeComponent {
 
-  @Input() title: string;
+  @Input() treeObject: TreeObject;
   @Input() parentInput: string;
-
-  childDirs: string[];
+  treeObjects: TreeObject[];
 
   constructor() { 
-    this.childDirs = [];
-  }
-
-  ngOnInit() {
+    this.treeObjects = [];
   }
 
   onClick() {
     let text = this.parentInput;
-    this.childDirs.push(text);
+    let newObject = new TreeObject(text);
+    this.treeObjects.push(newObject);
   }
 
 }

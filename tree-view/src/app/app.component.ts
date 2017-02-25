@@ -1,26 +1,27 @@
 import { Component } from '@angular/core';
 import { TreeComponent } from '././tree/tree.component';
 
+import { TreeObject } from './tree-object';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'hello world!';
 
-  components: string[];
-  dirs: string[];
+  treeObjects: TreeObject[];
   inputText: string;
 
   constructor() {
-    this.components = [];
+    this.treeObjects = [];
 
   }
 
   onClick() {
     let text = this.inputText;
-    this.components.push(text);
+    let newObject = new TreeObject(text);
+    this.treeObjects.push(newObject);
   }
 
 
