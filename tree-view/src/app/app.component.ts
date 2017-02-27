@@ -10,26 +10,27 @@ import { TreeObject } from './tree-object';
 })
 export class AppComponent {
 
+  readonly BUTTON_CODE_ENTER = 13;
   treeObjects: TreeObject[];
   inputText: string;
 
   constructor() {
+    this.inputText = "";
     this.treeObjects = [];
   }
 
   onButtonClick() {
     let text = this.inputText;
-    text = text.trim();
-
+    
     if (text === '') { return; }
-    else {
+    else {;
       let newObject = new TreeObject(text);
       this.treeObjects.push(newObject);
     }
   }
 
   onInputKeyPress(event) {
-    if (event.keyCode === 13) {
+    if (event.keyCode === this.BUTTON_CODE_ENTER) {
       this.onButtonClick();
     }
   }
